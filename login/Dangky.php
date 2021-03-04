@@ -66,9 +66,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				
 				
 					<form  method="post">
-						<input placeholder="Username " name="username" type="text" required="">
-						<input placeholder="Password" name="Password" type="password" required="">
-	
+						<input placeholder="Username " name="username" type="text" required>
+						<input placeholder="Password" name="Password" type="password" required>
+						<input placeholder="Email" name="Email" type="Email" required>
+						<input placeholder="Phone Number" name="Phone" type="text" required>
+						<input placeholder="Name" name="Name" type="text" required>
 						<input type="submit" value="Sign Up" name="login">
 					</form>
 					
