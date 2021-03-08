@@ -35,8 +35,26 @@ require "sidebar.php";
                                         <input type="password" class="span11" placeholder="Password" name="PassWord" required /> *
                                        
                                     </div>
-
+                                    <!-- Mấy dòng mới add vào này t chưa sửa cái name để cho nhận dữ liệu .. Mai t3 9/3 t sửa h add lên trước -->
+                                    <label class="control-label">Name:</label>
+                                    <div class="controls">
+                                        <input type="text" class="span11" placeholder="username" name="Username" required /> *
+                                       
+                                    </div>
                                    
+                                    <label class="control-label">Number Phone:</label>
+                                    <div class="controls">
+                                        <input type="text" class="span11" placeholder="username" name="Username" required /> *
+                                       
+                                    </div>
+
+                                    <label class="control-label">Email</label>
+                                    <div class="controls">
+                                        <input type="text" class="span11" placeholder="username" name="Username" required /> *
+                                       
+                                    </div>
+
+
                                     <div class="controls">
                                         <!-- <input type="hidden" class="span11" placeholder="Role" name="Role" value="editor" />  -->
                                        

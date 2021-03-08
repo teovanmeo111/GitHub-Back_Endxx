@@ -9,7 +9,7 @@
   $check=true;
     if(isset($_POST['username']))
     {
-		asdasdasd
+		
         $UsernameAll=$user->GetallUsername();
        
        foreach($UsernameAll as $value)
