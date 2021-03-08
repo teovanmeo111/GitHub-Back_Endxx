@@ -54,11 +54,17 @@ require "sidebar.php";
                                        
                                     </div>
 
-
+                                    <label class="control-label">Role</label>
                                     <div class="controls">
-                                        <!-- <input type="hidden" class="span11" placeholder="Role" name="Role" value="editor" />  -->
+                                    <select name="Role" id="cate" required >
+                                         <option value="Nhan Vien" > Nhan Vien </option>
+                                         <option value="Khach Hang" > Khach Hang </option>
+                                         </select>
                                        
                                     </div>
+
+                                              
+                                           
 
                                         <div class="form-actions">
                                             <button type="submit" class="btn btn-success">Add</button>

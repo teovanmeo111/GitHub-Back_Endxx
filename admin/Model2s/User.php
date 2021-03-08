@@ -36,7 +36,7 @@ return $items; //return an array
  return $items; //return an array
     }
     
-    function Account_Add($username,$password,$role,)
+    function Account_Add($username,$password,$role)
     {
 
         
