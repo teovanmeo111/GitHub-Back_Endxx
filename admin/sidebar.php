@@ -105,9 +105,11 @@ else
             <li><a href="index.php"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
             <li> <a href="manufactures.php"><i class="icon icon-th-list"></i> <span>Manufactures</span></a></li>
             <li> <a href="protypes.php"><i class="icon icon-th-list"></i> <span>Product type</span></a></li>
-            <?php if($_SESSION['admin']=='admin') { ?>
+            <li> <a href="Order_info.php"><i class="icon icon-th-list"></i> <span>Order</span></a></li>
+            <?php if($_SESSION['admin']['Role']=='admin') { ?>
             <li> <a href="users.php"><i class="icon icon-th-list"></i> <span>Users</span></a></li>
                 <?php  } ?> -->
+               
         </ul>
     </div><!-- BEGIN CONTENT -->
     <div id="content">

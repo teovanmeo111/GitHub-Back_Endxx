@@ -51,7 +51,7 @@ $demtam=0;
                                 ?>
                             <tr>
                                 <td class="cart_product">
-                                    <a href=""><img src="images/<?php echo $dataid[0]['pro_image']?>" alt=""
+                                    <a href="detail.php?id=<?php echo $dataid[0]['id'] ?>"><img src="images/<?php echo $dataid[0]['pro_image']?>" alt=""
                                             width=110></a>
                                 </td>
                                 <td class="cart_description">
@@ -80,17 +80,9 @@ $demtam=0;
 
                         </tbody>
                     </table>
-                    <form id="main-contact-form" class="contact-form row" name="contact-form" method="post"
-                        action="?order=ordered">
-                        <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Name" required >
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required >
-                        </div>
-                        <div class="form-group col-md-12">
-                            <input type="text" name="subject" class="form-control" placeholder="Phone number" required > 
-                        </div>
+                    <form  id="main-contact-form" class="contact-form row" name="contact-form" method="post"
+                        action="Order_Catching.php">
+                       
                         <div class="form-group col-md-12">
                             <textarea name="message" id="message" class="form-control" rows="3"
                                 placeholder="Your Message Here"></textarea>

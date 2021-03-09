@@ -13,9 +13,11 @@
 		if(count($dangnhap)>0)
 		{
 			
-			$_SESSION['admin']=$dangnhap[0]['Role'];
-			if($_SESSION['admin']=='admin'|| $_SESSION['admin']=='Nhan Vien' )
+			$_SESSION['admin']=$dangnhap[0];
+			
+			if($_SESSION['admin']['Role']=='admin'|| $_SESSION['admin']['Role']=='Nhan Vien' )
 			{
+
 				header("location:../admin/");
 			}
 			else
