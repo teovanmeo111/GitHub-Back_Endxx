@@ -35,28 +35,28 @@ require "sidebar.php";
                                         <input type="password" class="span11" placeholder="Password" name="PassWord" required /> *
                                        
                                     </div>
-                                    <!-- Mấy dòng mới add vào này t chưa sửa cái name để cho nhận dữ liệu .. Mai t3 9/3 t sửa h add lên trước -->
+                                   
                                     <label class="control-label">Name:</label>
                                     <div class="controls">
-                                        <input type="text" class="span11" placeholder="username" name="Username" required /> *
+                                        <input type="text" class="span11" placeholder="Name" name="Name" required /> *
                                        
                                     </div>
                                    
                                     <label class="control-label">Number Phone:</label>
                                     <div class="controls">
-                                        <input type="text" class="span11" placeholder="username" name="Username" required /> *
+                                        <input type="text" class="span11" placeholder="Phone" name="Phone" required /> *
                                        
                                     </div>
 
                                     <label class="control-label">Email</label>
                                     <div class="controls">
-                                        <input type="text" class="span11" placeholder="username" name="Username" required /> *
+                                        <input type="Email" class="span11" placeholder="Email" name="Email" required /> *
                                        
                                     </div>
 
                                     <label class="control-label">Role</label>
                                     <div class="controls">
-                                    <select name="Role" id="cate" required >
+                                    <select name="Role" id="role" required >
                                          <option value="Nhan Vien" > Nhan Vien </option>
                                          <option value="Khach Hang" > Khach Hang </option>
                                          </select>

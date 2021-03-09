@@ -7,26 +7,43 @@
 
   $user= new User;
   $check=true;
+  
+
     if(isset($_POST['username']))
     {
-		
-        $UsernameAll=$user->GetallUsername();
+		$UsernameAll=$user->GetfullUser();
+	
        
        foreach($UsernameAll as $value)
        {
+		  
            if($value['UserName']==$_POST['username'])
            {
                echo '<script language="javascript">'; echo 'alert("Vui lòng chọn tên khác vì tên này đã có người sử dụng")' ; echo '</script>'; 
 				$check=false;
 			   break;
            }
+		   else if($value['Email']==$_POST['Email'])
+		   {
+			echo '<script language="javascript">'; echo 'alert("Vui lòng điền email khác vì email này đã tồn tại")' ; echo '</script>'; 
+			$check=false;
+		   break;
+		   }
+		   else if($value['PhoneNumber']==$_POST['Phone'])
+		   {
+			echo '<script language="javascript">'; echo 'alert("Vui lòng chọn số điện thoại khác vì tên này đã có người sử dụng")' ; echo '</script>'; 
+			$check=false;
+		   break;
+		   }
 	   }
 	   if($check==true)
 	   {
-		$user->Account_Add($_POST['username'],md5($_POST['Password']),"Viewer");
+		  
+		$user->Account_Add($_POST['username'],md5($_POST['Password']),"Viewer",$_POST['Email'],$_POST['Phone'],$_POST['Name']);
 		echo '<script language="javascript">'; echo 'alert("Dăng ký thành công	")' ; echo '</script>'; 
 		
 	   }
+	   header("Refresh:0; url=Dangky.php");
     }
 	
 
@@ -64,7 +81,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="w3layouts-main">
 				<h2><span>Sign Up</span></h2>
 				
-				
+					
 					<form  method="post">
 						<input placeholder="Username " name="username" type="text" required>
 						<input placeholder="Password" name="Password" type="password" required>
@@ -72,8 +89,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<input placeholder="PhoneNumber" name="Phone" type="text" required>
 						<input placeholder="Name" name="Name" type="text" required>
 						<input type="submit" value="Sign Up" name="login">
+						<button type="submit" style="font-size:1.4rem;background:#2dde98;border-radius:2rem" ><a style="padding:1rem - 2rem;margin:1rem"  href="./index.php"> Trang Đăng nhập </a></button>
 					</form>
+
 					
+								
 			</div>
 			<!-- //main -->
 			

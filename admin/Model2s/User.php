@@ -4,9 +4,8 @@ class User extends Db
 {
     function GetfullUser()
     {
-        $sql = self::$connection->prepare("     SELECT * 
-        FROM user
-       ");
+        $sql = self::$connection->prepare("SELECT * 
+        FROM user ");
 $sql->execute();//return an object
 $items = array();
 $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -16,7 +15,7 @@ return $items; //return an array
     function CheckDangNhap($username, $password)
     {
         
-        $sql = self::$connection->prepare("    SELECT * FROM `user` WHERE `UserName`=? && `PassWord`=?  
+        $sql = self::$connection->prepare("SELECT * FROM `user` WHERE `UserName`=? && `PassWord`=?  
        ");
         $sql->bind_param("ss",$username,$password);
 $sql->execute();//return an object
@@ -36,12 +35,12 @@ return $items; //return an array
  return $items; //return an array
     }
     
-    function Account_Add($username,$password,$role)
+    function Account_Add($username,$password,$role,$email,$phonenumber,$Name)
     {
 
         
-        $sql=self::$connection->prepare(" INSERT INTO `user`( `UserName`, `PassWord`, `Role`) VALUES (?,?,?)");
-         $sql->bind_param("sss",$username,$password,$role);
+        $sql=self::$connection->prepare(" INSERT INTO `user`(`UserName`, `PassWord`, `Role`, `Email`, `PhoneNumber`, `Name`) VALUES (?,?,?,?,?,?)");
+         $sql->bind_param("ssssss",$username,$password,$role,$email,$phonenumber,$Name);
      return   $sql->execute();//return an object
     }
     function Account_Delete($username)
